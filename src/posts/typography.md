@@ -1,7 +1,7 @@
 ---
-title: "Typography"
+title: "Test Post"
 date: 2020-06-21T08:04
-thumb: "typography.png"
+thumb: ""
 tags:
     - markdown
     - sample

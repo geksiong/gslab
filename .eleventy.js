@@ -35,7 +35,7 @@ module.exports = (config) => {
     config.addCollection("tagList", tagListColl);
     config.addCollection("pagedPosts", pagedPostsColl);
     config.addCollection("pagedPostsByTag", pagedPostsByTagColl);
-    
+
     return {
         dir: {
             input: "src",

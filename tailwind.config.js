@@ -5,12 +5,12 @@ module.exports = {
         './src/**/*.html'
     ],
 	theme: {
-        screens: {
+        /**screens: {
             'sm': '576px',
             'md': '768px',
             'lg': '1024px',
             'xl': '1280px'
-        },
+        },**/
         extend: {
             spacing: {
                 "1/2": "0.125rem",

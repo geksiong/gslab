@@ -17,7 +17,7 @@
     {%- endif -%}
 {%- endset -%}
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 	<head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,9 +40,9 @@
         <link rel="stylesheet" href="/assets/css/main.css">
 	</head>	
   
-	<body class="flex flex-col h-screen bg-white text-gray-800 leading-normal break-words">
+	<body class="flex flex-col h-screen leading-normal text-gray-800 break-words bg-white">
         {% include "partials/header.njk" %}
-        <main class="mx-7 lg:mx-6 mt-32 flex-grow">
+        <main class="flex-grow mt-32 mx-7 lg:mx-6">
             {% if layout === "post" %}
             {{ content | safe }}
             {% else %}
