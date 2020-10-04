@@ -1,4 +1,5 @@
 const pluginTailwind = require("eleventy-plugin-tailwindcss");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const { DateTime } = require("luxon");
 
 const minifyHTML = require("./transforms/minify-html");
@@ -13,6 +14,8 @@ module.exports = (config) => {
     config.addPlugin(pluginTailwind, {
         src: "src/assets/css/*"
     });
+
+    config.addPlugin(syntaxHighlight);
 
     config.setDataDeepMerge(true);
 
