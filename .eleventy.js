@@ -1,6 +1,7 @@
 const pluginTailwind = require("eleventy-plugin-tailwindcss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const readingTime = require('eleventy-plugin-reading-time');
+const readerBar = require('eleventy-plugin-reader-bar');
 const { DateTime } = require("luxon");
 
 const minifyHTML = require("./transforms/minify-html");
@@ -18,6 +19,7 @@ module.exports = (config) => {
 
     config.addPlugin(syntaxHighlight);
     config.addPlugin(readingTime);
+    config.addPlugin(readerBar);
 
     config.setDataDeepMerge(true);
 
