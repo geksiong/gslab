@@ -2,17 +2,17 @@
 const header = document.getElementById("header");
 let lastPos = document.documentElement.scrollTop;
 window.addEventListener("scroll", function () {
-    let currPos = document.documentElement.scrollTop;
-    if (currPos > lastPos) {
-        if (currPos > header.offsetHeight) {
-            header.classList.add("hide-header");
-            header.classList.remove("nice-shadow");
-        }
-    } else {
-        header.classList.remove("hide-header");
-        header.classList.add("nice-shadow");
+  let currPos = document.documentElement.scrollTop;
+  if (currPos > lastPos) {
+    if (currPos > header.offsetHeight) {
+      header.classList.add("hide-header");
+      header.classList.remove("nice-shadow");
     }
-    lastPos = currPos;
+  } else {
+    header.classList.remove("hide-header");
+    header.classList.add("nice-shadow");
+  }
+  lastPos = currPos;
 });
 
 // menu toggle on mobile device
@@ -20,16 +20,20 @@ const menu = document.getElementById("menu");
 const searchBox = document.getElementById("search");
 const menuToggle = document.getElementById("menu-toggle");
 menuToggle.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-    searchBox.classList.toggle("hidden");
+  menu.classList.toggle("hidden");
+  searchBox.classList.toggle("hidden");
 });
 
 // simple lazy load
 const lazyImages = document.getElementsByClassName("lazy");
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
     [...lazyImages].forEach((elem) => {
-        let originalImage = elem.dataset.src;
-        elem.setAttribute("src", originalImage);
-        elem.removeAttribute("data-src");
+      let originalImage = elem.dataset.src;
+      elem.setAttribute("src", originalImage);
+      elem.removeAttribute("data-src");
     });
-}, false);
+  },
+  false
+);

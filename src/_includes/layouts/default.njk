@@ -1,64 +1,64 @@
 {%- set metaTitle -%}
-    {%- if not title -%}{{ site.title }} - {{ site.description | safe }}
-    {%- else -%}{{ title | safe }} | {{ site.title }}
-    {%- endif -%}
+  {%- if not title -%}{{ site.title }} - {{ site.description | safe }}
+  {%- else -%}{{ title | safe }} | {{ site.title }}
+  {%- endif -%}
 {%- endset -%}
 {%- set metaDesc -%}
-    {%- if not description -%}{{ site.description | safe }}
-    {%- else -%}{{ description | safe }}
-    {%- endif -%}
+  {%- if not description -%}{{ site.description | safe }}
+  {%- else -%}{{ description | safe }}
+  {%- endif -%}
 {%- endset -%}
 {%- set metaKeywords -%}
-    {%- if tags -%}{%- for tag in tags -%}{{ tag }},{%- endfor -%}{%- endif -%}
-    {%- if site.keywords -%}
-        {%- for keyword in site.keywords -%}
-            {{ keyword }}{%- if not loop.last %},{% endif -%}
-        {%- endfor -%}
-    {%- endif -%}
+  {%- if tags -%}{%- for tag in tags -%}{{ tag }},{%- endfor -%}{%- endif -%}
+  {%- if site.keywords -%}
+    {%- for keyword in site.keywords -%}
+      {{ keyword }}{%- if not loop.last %},{% endif -%}
+    {%- endfor -%}
+  {%- endif -%}
 {%- endset -%}
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ metaTitle }}</title>
-        <meta name="title" content="{{ metaTitle }}">
-        <meta name="description" content="{{ metaDesc }}">
-        <meta name="keywords" content="{{ metaKeywords }}">
-        <meta name="author" content="{{ author.name }}">
-        <meta name="robots" content="index, follow">
-        <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-        <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png">
-        <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
-        <link rel="stylesheet" href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css">
-        <link rel="stylesheet" href="/assets/css/main.css">
-	</head>	
-  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ metaTitle }}</title>
+    <meta name="title" content="{{ metaTitle }}">
+    <meta name="description" content="{{ metaDesc }}">
+    <meta name="keywords" content="{{ metaKeywords }}">
+    <meta name="author" content="{{ author.name }}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+	</head>
+
 	<body class="flex flex-col h-screen leading-normal text-gray-800 break-words bg-white">
-        {% include "partials/header.njk" %}
-        <main class="flex-grow mt-32 mx-7 lg:mx-6">
-            {% if layout === "post" %}
-            <div class="reader-bar-start">
-                {{ content | safe }}
-                {% readerBar "4px", "transparent", "orange" %}
-            </div>
-            {% else %}
-            <div class="max-w-5xl mx-auto">
-                {{ content | safe }}
-            </div>
-            {% endif %}
-        </main>
-        {% include "partials/footer.njk" %}
-        <script src="/assets/js/main.js"></script>
-        {% if page.url === "/search/" %}
-        <script src="/assets/js/search.js"></script>
-        {% endif %}
+    {% include "partials/header.njk" %}
+    <main class="flex-grow mt-32 mx-7 lg:mx-6">
+      {% if layout === "post" %}
+      <div class="reader-bar-start">
+        {{ content | safe }}
+        {% readerBar "4px", "transparent", "orange" %}
+      </div>
+      {% else %}
+      <div class="max-w-5xl mx-auto">
+        {{ content | safe }}
+      </div>
+      {% endif %}
+    </main>
+    {% include "partials/footer.njk" %}
+    <script src="/assets/js/main.js"></script>
+    {% if page.url === "/search/" %}
+    <script src="/assets/js/search.js"></script>
+    {% endif %}
 	</body>
 </html>

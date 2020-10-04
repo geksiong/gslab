@@ -1,124 +1,124 @@
 @tailwind base;
 
 body {
-    font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,helvetica,Arial,sans-serif;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,helvetica,Arial,sans-serif;
 }
 
 h1 {
-    @apply font-medium text-gray-800 mb-4 mt-6 leading-normal text-3xl;
+  @apply mt-6 mb-4 text-3xl font-medium leading-normal text-gray-800;
 }
 
 h2 {
-    @apply font-medium text-gray-800 mb-4 mt-6 leading-snug text-2xl;
+  @apply mt-6 mb-4 text-2xl font-medium leading-snug text-gray-800;
 }
 
 h3 {
-    @apply font-medium text-gray-800 mb-4 mt-6 leading-snug text-xl;
+  @apply mt-6 mb-4 text-xl font-medium leading-snug text-gray-800;
 }
 
 h4 {
-    @apply font-medium text-gray-800 mb-4 mt-6 leading-snug text-lg;
+  @apply mt-6 mb-4 text-lg font-medium leading-snug text-gray-800;
 }
 
 h5 {
-    @apply font-medium text-gray-800 mb-4 mt-6 leading-tight text-lg;
+  @apply mt-6 mb-4 text-lg font-medium leading-tight text-gray-800;
 }
 
 h6 {
-    @apply font-medium text-gray-700 mb-4 mt-6 leading-tight text-lg;
+  @apply mt-6 mb-4 text-lg font-medium leading-tight text-gray-700;
 }
 
 strong {
-    @apply font-semibold;
+  @apply font-semibold;
 }
 
 code {
-    @apply font-mono text-sm inline bg-gray-200 rounded px-1 py-1/2;
+  @apply inline px-1 font-mono text-sm bg-gray-200 rounded py-1/2;
 }
 
 pre {
-    @apply bg-gray-200 p-4 rounded overflow-auto;
+  @apply p-4 overflow-auto bg-gray-200 rounded;
 }
 
 pre code {
-    @apply block bg-transparent p-0 overflow-visible rounded-none;
+  @apply block p-0 overflow-visible bg-transparent rounded-none;
 }
 
 kbd {
-    @apply text-xs inline-block border px-1 py-1/2 align-middle font-normal font-mono shadow rounded;
+  @apply inline-block px-1 font-mono text-xs font-normal align-middle border rounded shadow py-1/2;
 }
 
 blockquote {
-    @apply text-base border-l-4 border-gray-300 ml-4 pl-4 pr-4 text-gray-600;
+  @apply pl-4 pr-4 ml-4 text-base text-gray-600 border-l-4 border-gray-300;
 }
 
 #content {
-    @apply text-gray-800;
+  @apply text-gray-800;
 }
 
 #content > * {
-    @apply mb-4;
+  @apply mb-4;
 }
 
 #content a {
-    @apply text-teal-700 font-medium;
+  @apply font-medium text-teal-700;
 }
 
 #content strong a {
-    @apply font-bold;
+  @apply font-bold;
 }
 
 #content ul {
-    @apply text-base pl-8 list-disc;
+  @apply pl-8 text-base list-disc;
 }
 
 #content ol {
-    @apply text-base pl-8 list-decimal;
+  @apply pl-8 text-base list-decimal;
 }
 
 #content li + li {
-    @apply mt-1;
+  @apply mt-1;
 }
 
 #content li > p + p {
-    @apply mt-6;
+  @apply mt-6;
 }
 
 #content table {
-    @apply text-base border-gray-600;
+  @apply text-base border-gray-600;
 }
 
 #content th {
-    @apply border py-1 px-3;
+  @apply px-3 py-1 border;
 }
 
 #content td {
-    @apply border py-1 px-3;
+  @apply px-3 py-1 border;
 }
 
 #content h1:hover > a, #content h2:hover > a, #content h3:hover > a, #content h4:hover > a {
-    @apply opacity-100;
+  @apply opacity-100;
 }
 
 @tailwind components;
 
 .heading-anchor {
-    @apply opacity-0 align-top;
+  @apply align-top opacity-0;
 }
 
 .hide-header {
-    transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 
 @tailwind utilities;
 
 .nice-shadow {
-    box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 5px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 5px -1px rgba(0, 0, 0, 0.06);
 }
 
-.visually-hidden { 
-    @apply block absolute h-px w-px overflow-hidden whitespace-no-wrap;
-    clip: rect(1px 1px 1px 1px);
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(1px);
+.visually-hidden {
+  @apply absolute block w-px h-px overflow-hidden whitespace-no-wrap;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(1px);
 }
