@@ -14,6 +14,8 @@ const pagedPostsByTagColl = require("./collections/pagedPostsByTag");
 module.exports = (config) => {
   // Markdown plugins
   let markdownIt = require("markdown-it");
+  let markdownItAnchor = require("markdown-it-anchor");
+  let markdownItToc = require("markdown-it-toc-done-right");
   let markdownItEmoji = require("markdown-it-emoji");
   let markdownItContainer = require("markdown-it-container");
   let markdownItKatex = require("@swedish-li/markdown-it-katex");
@@ -22,7 +24,10 @@ module.exports = (config) => {
   };
   let markdownLib = markdownIt(options)
 
-  markdownLib.use(markdownItEmoji)
+  markdownLib
+  .use(markdownItAnchor)
+  .use(markdownItToc)
+  .use(markdownItEmoji)
   .use(markdownItContainer, 'details', {
     validate: function(params) {
       return params.trim().match(/^details\s+(.*)$/);

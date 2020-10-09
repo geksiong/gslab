@@ -7,6 +7,11 @@ tags:
     - sample
 katex: true
 ---
+::: details Table of Contents
+[toc]
+:::
+
+---
 
 # markdown-it-emoji
 
