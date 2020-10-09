@@ -159,3 +159,8 @@ blockquote {
 .details {
   @apply p-2 bg-gray-200;
 }
+
+/* This is needed to protect katext formulas from Tailwind's base CSS, even with the 0.12 fixes */
+.katex * {
+  border-color: #000;
+}

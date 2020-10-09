@@ -16,6 +16,7 @@ module.exports = (config) => {
   let markdownIt = require("markdown-it");
   let markdownItEmoji = require("markdown-it-emoji");
   let markdownItContainer = require("markdown-it-container");
+  let markdownItKatex = require("@swedish-li/markdown-it-katex");
   let options = {
     html: true
   };
@@ -49,7 +50,8 @@ module.exports = (config) => {
           return `</div>`;
       }
     }
-  });
+  })
+  .use(markdownItKatex);
 
   config.setLibrary("md", markdownLib);
 
