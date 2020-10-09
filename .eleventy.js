@@ -44,7 +44,6 @@ module.exports = (config) => {
   config.addCollection("pagedPostsByTag", pagedPostsByTagColl);
 
   return {
-    pathPrefix: "/gslab/",
     dir: {
       input: "src",
       output: "dist"

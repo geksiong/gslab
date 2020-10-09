@@ -6,8 +6,9 @@
 		"clean": "rimraf dist/*",
 		"start": "yarn clean && cross-env NODE_ENV=development eleventy --serve",
 		"build": "yarn clean && cross-env NODE_ENV=production eleventy",
+		"build:gh-pages": "yarn build --pathprefix='gslab'",
 		"debug": "DEBUG=Eleventy* yarn build",
-    "deploy:gh-pages": "yarn build && cd dist && git commit -am 'Update website' && git push"
+    "deploy:gh-pages": "yarn build:gh-pages && cd dist && git commit -am 'Update website' && git push"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^0.11.0",
