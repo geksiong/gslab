@@ -12,9 +12,49 @@ const pagedPostsColl = require("./collections/pagedPosts");
 const pagedPostsByTagColl = require("./collections/pagedPostsByTag");
 
 module.exports = (config) => {
+  // Markdown plugins
+  let markdownIt = require("markdown-it");
+  let markdownItEmoji = require("markdown-it-emoji");
+  let markdownItContainer = require("markdown-it-container");
+  let options = {
+    html: true
+  };
+  let markdownLib = markdownIt(options)
+
+  markdownLib.use(markdownItEmoji)
+  .use(markdownItContainer, 'details', {
+    validate: function(params) {
+      return params.trim().match(/^details\s+(.*)$/);
+    },
+    render: function (tokens, idx) {
+      var m = tokens[idx].info.trim().match(/^details\s+(.*)$/);
+      if (tokens[idx].nesting === 1) {
+        // opening tag
+        return '<details class="details"><summary>' + markdownLib.utils.escapeHtml(m[1]) + '</summary>\n';
+      } else {
+        // closing tag
+        return '</details>\n';
+      }
+    }
+  })
+  .use(markdownItContainer, '', {
+    validate: () => true,
+    render: (tokens, idx) => {
+      if (tokens[idx].nesting === 1) {
+          const m = tokens[idx].info.trim().match(/^(\w*)\s*(.*)$/);
+          const containerClass = m[1];
+          const containerHeader = m[2] || containerClass.toUpperCase();
+          return `<div ${containerClass && `class="${containerClass}"`}><span>${containerHeader}</span>`;
+      } else {
+          return `</div>`;
+      }
+    }
+  });
+
+  config.setLibrary("md", markdownLib);
 
   config.addPlugin(pluginTailwind, {
-      src: "src/assets/css/*"
+    src: "src/assets/css/*"
   });
 
   config.addPlugin(syntaxHighlight);

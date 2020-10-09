@@ -122,3 +122,40 @@ blockquote {
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(1px);
 }
+
+/* Custom CSS classs */
+.warning {
+  @apply p-2 bg-yellow-200 border-l-4 border-yellow-600;
+}
+
+.warning span {
+  @apply font-bold text-yellow-600;
+}
+
+.info {
+  @apply p-2 bg-blue-200 border-l-4 border-blue-600;
+}
+
+.info span {
+  @apply font-bold text-blue-600;
+}
+
+.success {
+  @apply p-2 bg-green-200 border-l-4 border-green-600;
+}
+
+.success span {
+  @apply font-bold text-green-600;
+}
+
+.danger {
+  @apply p-2 bg-red-200 border-l-4 border-red-600;
+}
+
+.danger span {
+  @apply font-bold text-red-600;
+}
+
+.details {
+  @apply p-2 bg-gray-200;
+}
