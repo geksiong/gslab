@@ -20,6 +20,10 @@ Technically you can just insert the unicode symbol directly into the post. The p
 - **Emoticons:** :) :(
 - **Emojis:** :joy: :+1:
 
+# markdown-it-external-links
+
+External link: [Link to google](https://www.google.com)
+
 # markdown-it-container
 
 ::: warning

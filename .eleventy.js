@@ -16,6 +16,7 @@ module.exports = (config) => {
   let markdownIt = require("markdown-it");
   let markdownItAnchor = require("markdown-it-anchor");
   let markdownItToc = require("markdown-it-toc-done-right");
+  let markdownItExtLinks = require("markdown-it-external-links");
   let markdownItEmoji = require("markdown-it-emoji");
   let markdownItContainer = require("markdown-it-container");
   let markdownItKatex = require("@swedish-li/markdown-it-katex");
@@ -27,6 +28,7 @@ module.exports = (config) => {
   markdownLib
   .use(markdownItAnchor)
   .use(markdownItToc)
+  .use(markdownItExtLinks)
   .use(markdownItEmoji)
   .use(markdownItContainer, 'details', {
     validate: function(params) {

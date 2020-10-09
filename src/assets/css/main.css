@@ -124,6 +124,11 @@ blockquote {
 }
 
 /* Custom CSS classs */
+.external-link::after {
+  @apply text-gray-500;
+  content: "🌐";
+}
+
 .warning {
   @apply p-2 bg-yellow-200 border-l-4 border-yellow-600;
 }
