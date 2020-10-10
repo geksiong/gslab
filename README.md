@@ -1,16 +1,12 @@
-# Vredeburg
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a1d36fc9-4471-4679-902c-337449ccb59d/deploy-status)](https://app.netlify.com/sites/vredeburg/deploys)
+# My Lab
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c83f799c-7a54-4310-a4b4-0c7084c021ef/deploy-status)](https://app.netlify.com/sites/gslab/deploys)
 
-A simple starter project to create a blog using Eleventy and Tailwind CSS
-
-![sip](https://i.imgur.com/wGj2YZD.jpg)
-
-See demo [here](https://vredeburg.netlify.app)!
+A still-evolving website based on Eleventy and Tailwind CSS. This is based on the [Vredeburg](https://github.com/dafiulh/vredeburg) starter project.
 
 ## Getting Started
 1. Clone this repository
 ```bash
-git clone https://github.com/dafiulh/vredeburg.git blog-name
+git clone https://github.com/geksiong/gslab.git blog-name
 ```
 2. Navigate to the directory
 ```bash
@@ -18,22 +14,22 @@ cd blog-name
 ```
 3. Install dependencies
 ```bash
-npm install
+yarn install
 ```
 
 ### Use in development
 ```bash
-npm start
+yarn start
 ```
 
 ### Build for production
 ```bash
-npm run build
+yarn build
 ```
 
 ### For debugging purposes
 ```bash
-npm run debug
+yarn debug
 ```
 
 ## Configuration
