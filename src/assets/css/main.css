@@ -123,7 +123,8 @@ blockquote {
   clip-path: inset(1px);
 }
 
-/* Custom CSS classs */
+/* Custom CSS classes */
+
 .external-link::after {
   @apply text-gray-500;
   content: "↗";
@@ -166,11 +167,13 @@ blockquote {
 }
 
 /* This is needed to protect katext formulas from Tailwind's base CSS, even with the 0.12 fixes */
+
 .katex * {
   border-color: #000;
 }
 
 /* Highlighted lines in code blocks */
+
 code .highlight-line-active {
   @apply inline-block w-full bg-black;
 }
@@ -182,3 +185,29 @@ code .highlight-line-add {
 code .highlight-line-remove {
   @apply inline-block w-full text-red-500 bg-red-900;
 }
+
+/* Grouped code fences */
+#content .code-group {
+  @apply p-2 bg-gray-200;
+}
+
+#content .code-group ul.code-group-nav {
+  @apply px-0;
+}
+
+#content .code-group ul.code-group-nav li {
+  @apply inline px-4 list-none;
+}
+
+#content .code-group .code-group-radio:not(:checked) + pre {
+  @apply hidden;
+}
+
+#content .code-group .code-group-label:checked + label {
+  @apply font-bold;
+}
+
+#content .code-group .code-group-label:not(:checked) + label {
+  @apply opacity-50;
+}
+

@@ -88,3 +88,30 @@ $$\begin{array}{c}
 \nabla \cdot \vec{\mathbf{B}} & = 0
 
 \end{array}$$
+
+# markdown-it-grouped-code-fence
+
+```js [ex1-javascript]
+function hello() {
+  console.log("Hello!")
+}
+```
+
+```python [ex1-python3]
+def hello:
+  print("Hello!")
+```
+
+Here's another group
+
+```ruby [ex2-ruby]
+def hello
+  put "Hello!"
+end
+```
+
+```java [ex2-java]
+public static void hello() {
+  System.out.println("Hello!");
+}
+```

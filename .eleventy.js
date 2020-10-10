@@ -20,6 +20,7 @@ module.exports = (config) => {
   let markdownItExtLinks = require("markdown-it-external-links");
   let markdownItEmoji = require("markdown-it-emoji");
   let markdownItContainer = require("markdown-it-container");
+  let markdownItGroupedCodeFence =require("markdown-it-grouped-code-fence");
   let markdownItKatex = require("@swedish-li/markdown-it-katex");
 
   let options = {
@@ -61,6 +62,14 @@ module.exports = (config) => {
       }
     }
   })
+  .use(markdownItGroupedCodeFence.groupedCodeFencePlugin({
+    className: {
+      container: 'code-group',
+      navigationBar: 'code-group-nav',
+      fenceRadio: 'code-group-radio',
+      labelRadio: 'code-group-label',
+    }
+  }))
   .use(markdownItKatex);
 
   config.setLibrary("md", markdownLib);
