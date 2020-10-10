@@ -43,7 +43,9 @@ Lid est laborum et dolorum fuga, This is [an example](http://example.com/ "Title
 
 Following is the syntax highlighted code block
 
-```go
+Lines 3-5 are marked here:
+
+```go/3-5
 func getCookie(name string, r interface{}) (*http.Cookie, error) {
   rd := r.(*http.Request)
   cookie, err := rd.Cookie(name)
@@ -52,7 +54,10 @@ func getCookie(name string, r interface{}) (*http.Cookie, error) {
   }
   return cookie, nil
 }
+```
+Line 2 is marked as "add", line 4 as "remove":
 
+```go/2/4
 func setCookie(cookie *http.Cookie, w interface{}) error {
   // Get write interface registered using `Acquire` method in handlers.
   wr := w.(http.ResponseWriter)

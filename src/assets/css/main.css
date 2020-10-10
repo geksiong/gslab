@@ -169,3 +169,16 @@ blockquote {
 .katex * {
   border-color: #000;
 }
+
+/* Highlighted lines in code blocks */
+code .highlight-line-active {
+  @apply inline-block w-full bg-black;
+}
+
+code .highlight-line-add {
+  @apply inline-block w-full text-green-500 bg-green-900;
+}
+
+code .highlight-line-remove {
+  @apply inline-block w-full text-red-500 bg-red-900;
+}
