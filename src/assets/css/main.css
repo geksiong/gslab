@@ -126,7 +126,7 @@ blockquote {
 /* Custom CSS classs */
 .external-link::after {
   @apply text-gray-500;
-  content: "🌐";
+  content: "↗";
 }
 
 .warning {
