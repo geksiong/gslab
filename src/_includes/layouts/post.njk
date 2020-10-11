@@ -2,11 +2,12 @@
 layout: default
 ---
 
-<article class="max-w-5xl mx-auto">
-  <header class="mb-12">
-    <h1 class="mt-0 mb-2 font-medium text-center">{{ title }}</h1>
-    <div class="text-center">Published on {{ page.date | readableDate }}</div>
-    <div class="text-center">Reading time: about {{ content | readingTime }}</div>
+<div style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(0,0,0,0.7)), url('{{ thumb | url }}');" class="w-full pt-32 pb-2 bg-center bg-cover">
+  <div class="max-w-5xl mx-auto">
+    <header class="mb-4 text-white">
+    <h1 class="mt-0 mb-2 font-medium text-center text-white" style="text-shadow: 2px 2px 4px #000;">{{ title }}</h1>
+    <div class="text-center" style="text-shadow: 2px 2px 4px #000;">Published on {{ page.date | readableDate }}</div>
+    <div class="text-center" style="text-shadow: 2px 2px 4px #000;">Reading time: about {{ content | readingTime }}</div>
     {% if tags %}
     <div class="mt-3 text-center">
       {% for tag in tags %}
@@ -14,17 +15,17 @@ layout: default
       {% endfor %}
     </div>
     {% endif %}
-    {% if thumb %}
-    <div class="mt-9 -mx-7 md:mx-0">
-      <img class="w-full max-w-2xl mx-auto" src="{{ thumb | url }}" alt="This post thumbnail">
-    </div>
-    {% endif %}
   </header>
-  <div id="content" class="text-lg leading-relaxed">
+
+  </div>
+</div>
+
+<article class="max-w-5xl mx-auto mt-12">
+  <div id="content" class="mx-6 text-lg leading-relaxed lg:mx-0">
     {{ content | safe }}
   </div>
 
-  <div class="flex justify-between mt-10">
+  <div class="flex justify-between mx-6 mt-10 lg:mx-0">
     <p class="text-left">
       {% if newerPost.url %}
       <a href="{{ newerPost.url }}">« {{ newerPost.data.title }}</a><br/>
@@ -40,7 +41,7 @@ layout: default
   </div>
 
   {% if site.disqusShortname %}
-  <div class="mt-10">
+  <div class="mx-6 mt-10 lg:mx-0">
     {% if process.environment === "production" %}
     {% include "partials/disqus.njk" %}
     {% else %}

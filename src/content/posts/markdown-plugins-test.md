@@ -1,7 +1,7 @@
 ---
 title: "Markdown Plugins Test"
 date: 2020-10-09T19:08
-thumb: ""
+thumb: "https://images.unsplash.com/photo-1600509697462-0eea86c82d6b?q=75&fm=jpg&w=400&fit=max"
 tags:
     - markdown
     - sample

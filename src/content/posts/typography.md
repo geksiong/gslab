@@ -1,7 +1,7 @@
 ---
-title: "Test Post"
+title: "Markdown Typography Test"
 date: 2020-06-21T08:04
-thumb: ""
+thumb: "https://images.unsplash.com/photo-1581080247486-57989c1f14ab?q=75&fm=jpg&w=400&fit=max"
 tags:
     - markdown
     - sample

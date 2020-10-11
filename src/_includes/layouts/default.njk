@@ -51,15 +51,17 @@
 
 	<body class="flex flex-col h-screen leading-normal text-gray-800 break-words bg-white">
     {% include "partials/header.njk" %}
-    <main class="flex-grow mt-32 mx-7 lg:mx-6">
+    <main class="flex-grow">
       {% if layout === "post" %}
       <div class="reader-bar-start">
         {{ content | safe }}
         {% readerBar "4px", "transparent", "orange" %}
       </div>
       {% else %}
-      <div class="max-w-5xl mx-auto">
+      <div class="max-w-5xl mx-auto mt-32">
+        <div class="mx-6 lg:mx-0">
         {{ content | safe }}
+        </div>
       </div>
       {% endif %}
     </main>
