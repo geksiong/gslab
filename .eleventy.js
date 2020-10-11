@@ -23,6 +23,7 @@ module.exports = (config) => {
   let markdownItGroupedCodeFence =require("markdown-it-grouped-code-fence");
   let markdownItKatex = require("@swedish-li/markdown-it-katex");
   let markdownItCharts = require("markdown-it-charts");
+  let markdownItPlantUML = require("markdown-it-plantuml-ex");
 
   let options = {
     html: true
@@ -72,6 +73,7 @@ module.exports = (config) => {
     }
   }))
   .use(markdownItCharts)
+  .use(markdownItPlantUML)
   .use(markdownItKatex);
 
   config.setLibrary("md", markdownLib);
