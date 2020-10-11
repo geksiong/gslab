@@ -22,6 +22,7 @@ module.exports = (config) => {
   let markdownItContainer = require("markdown-it-container");
   let markdownItGroupedCodeFence =require("markdown-it-grouped-code-fence");
   let markdownItKatex = require("@swedish-li/markdown-it-katex");
+  let markdownItCharts = require("markdown-it-charts");
 
   let options = {
     html: true
@@ -70,6 +71,7 @@ module.exports = (config) => {
       labelRadio: 'code-group-label',
     }
   }))
+  .use(markdownItCharts)
   .use(markdownItKatex);
 
   config.setLibrary("md", markdownLib);

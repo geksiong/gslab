@@ -42,6 +42,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
     {% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
+    {% if chart %}
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    {% endif %}
 
 	</head>
 
@@ -63,6 +67,21 @@
     <script src="{{ '/assets/js/main.js' | url }}"></script>
     {% if page.url === "/search/" %}
     <script src="{{ '/assets/js/search.js' | url }}"></script>
+    {% endif %}
+
+    {% if chart %}
+    <script>
+      $(function(){
+        var reg = /^[\'\"]+|[\'\"]+$/g;
+        //-  chart.js
+        var chartjsLen = $('.chartjs').length;
+        var myChartJs = [];
+        for(var i = 0;i < chartjsLen; i++){
+          var ctx = $('.chartjs')[i].getContext('2d');
+          myChartJs[i] = new Chart(ctx,$.parseJSON($($('.chartjs')[i])[0].innerHTML))
+        }
+      })
+    </script>
     {% endif %}
 	</body>
 </html>
