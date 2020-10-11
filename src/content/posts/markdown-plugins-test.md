@@ -28,6 +28,10 @@ External link: [Link to google](https://www.google.com)
 
 # markdown-it-container
 
+::: tip
+This is a tip
+:::
+
 ::: warning
 This is a warning
 :::
@@ -198,9 +202,9 @@ digraph example1 {
 
 # markdown-it-chords
 
-_Tip: Write the lyrics inside a "chord" container block_
+_Tip: Write the lyrics inside a "chords" container block_
 
-::: chord <b>Do-Re-Mi in Bossa style</b>
+::: chords Do-Re-Mi in Bossa style
 [C]Do, a deer, a female deer\
 [Dm]Ray, a drop of golden sun\
 [Eb]May, a possi[D#]bility\

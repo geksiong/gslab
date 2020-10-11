@@ -60,7 +60,7 @@ module.exports = (config) => {
           const m = tokens[idx].info.trim().match(/^(\w*)\s*(.*)$/);
           const containerClass = m[1];
           const containerHeader = m[2] || containerClass.toUpperCase();
-          return `<div ${containerClass && `class="${containerClass}"`}><span>${containerHeader}</span>`;
+          return `<div ${containerClass && `class="${containerClass}"`}><span class="title">${containerHeader}</span>`;
       } else {
           return `</div>`;
       }
