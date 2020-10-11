@@ -83,5 +83,15 @@
       })
     </script>
     {% endif %}
+
+    {% if mermaid %}
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.8.2/dist/mermaid.min.js"></script>
+    <script>
+      mermaid.initialize({
+        startOnLoad:true,
+        theme: "forest"
+      });
+    </script>
+    {% endif %}
 	</body>
 </html>

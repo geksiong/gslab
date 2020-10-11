@@ -7,6 +7,7 @@ tags:
     - sample
 katex: true
 chart: true
+mermaid: true
 ---
 ::: details Table of Contents
 [toc]
@@ -154,6 +155,8 @@ public static void hello() {
 
 # markdown-it-plantuml-ex
 
+This plugin only processes code blocks with "plantuml" language. The diagram is pre-generated offline using plantuml.jar
+
 ```plantuml
 @startuml
 Alice -> Bob: Authentication Request
@@ -161,5 +164,34 @@ Bob --> Alice: Authentication Response
 
 Alice -> Bob: Another authentication Request
 Alice <-- Bob: Another authentication Response
+
+legend
+Rendered with Plantuml Version %version()
+end legend
 @enduml
+```
+
+# markdown-it-textual-uml
+
+_Note: for PlantUML diagrams, markdown-it-plantuml-ex takes precedence_
+
+## Mermaid diagram
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+## Dot diagram
+
+This is actually a plantuml diagram rendered by the online plantuml server. Because it specifies the language as "dot", it is processed by mrkdown-it-textual-uml.
+
+```dot
+digraph example1 {
+    1 -> 2 -> { 4, 5 };
+    1 -> 3 -> { 6, 7 };
+}
 ```

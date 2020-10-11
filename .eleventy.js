@@ -24,6 +24,7 @@ module.exports = (config) => {
   let markdownItKatex = require("@swedish-li/markdown-it-katex");
   let markdownItCharts = require("markdown-it-charts");
   let markdownItPlantUML = require("markdown-it-plantuml-ex");
+  let markdownItTextualUML = require("markdown-it-textual-uml");
 
   let options = {
     html: true
@@ -74,6 +75,7 @@ module.exports = (config) => {
   }))
   .use(markdownItCharts)
   .use(markdownItPlantUML)
+  .use(markdownItTextualUML)
   .use(markdownItKatex);
 
   config.setLibrary("md", markdownLib);
