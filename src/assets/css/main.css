@@ -221,10 +221,12 @@ code .highlight-line-remove {
 
 /* markdown-it-chords */
 
-.chords {
+.chords,
+.justchords {
   @apply py-4;
 }
-.chords .title {
+.chords .title,
+.justchords .title {
   @apply text-xl font-bold;
 }
 
@@ -268,4 +270,20 @@ code .highlight-line-remove {
 	background: white;
   z-index: 5;
   @apply shadow-lg;
+}
+
+/* Override some of the above when chords are in a "justchords" block */
+
+.justchords .chord {
+  height: auto;
+}
+
+.justchords .chord .inner {
+  position: relative;
+  bottom: 0;
+  font-size: 100%;
+}
+
+.justchords .chord i.diagram {
+	position: relative;
 }

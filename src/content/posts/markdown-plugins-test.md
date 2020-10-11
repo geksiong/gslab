@@ -28,7 +28,7 @@ External link: [Link to google](https://www.google.com)
 
 # markdown-it-container
 
-::: tip
+::: tip This is a tip
 This is a tip
 :::
 
@@ -56,6 +56,7 @@ function hello() {
   console.log("Hello!");
 }
 ```
+
 :::
 
 # markdown-it-footnote
@@ -216,3 +217,15 @@ _Tip: Write the lyrics inside a "chords" container block_
 [AmΔ7/9]Tea, — I [A-7]sit and sip so [D#ø7]slow . . .[D#o7]\
 That will [Dm7|x57565]bring — [F6(9)|x87788]us —— [Em7|x79787]back — [G13|x,10,x,12,12,12]to —— [8xx987]Do . . . .[8,(10),10,9,10,x]
 :::
+
+::: justchords Just chords
+
+These are inside a "justchords" container block. The styles can definitely be improved. :)
+
+[Cmaj7|335453] [G7] [Em7] [Am7] | [F] [Cmaj7] [Dm7] [G7]
+
+[C] / / / | [Am] / / / | [F] / / / | [G7] / / / |
+
+:::
+
+Stay tuned for more...
