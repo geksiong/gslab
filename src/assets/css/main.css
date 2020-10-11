@@ -211,3 +211,45 @@ code .highlight-line-remove {
   @apply opacity-50;
 }
 
+/* markdown-it-chords */
+:root {
+	--chord-diagram-font-size: 10px;
+}
+.chord {
+	display: inline-block;
+	position: relative;
+	user-select: none;
+  height: 3.2em;
+}
+.chord.diagram {
+	height: calc(1.5em + (3.5 * var(--chord-diagram-font-size)))
+}
+.chord .inner {
+	position: absolute;
+	display: block;
+	left: 0;
+  bottom: 1.3em;
+  font-size: 80%;
+}
+.chord i {
+	font-style: normal;
+	display: inline-block;
+}
+.chord i.diagram {
+	font: 100 var(--chord-diagram-font-size) Courier;
+	line-height: .5em;
+	position: absolute;
+	bottom: 0;
+	display: none;
+}
+.chord .inner:hover i.diagram,
+.chord.diagram i.diagram,
+.chord i.diagram.show {
+  display: inline-block;
+  padding: 4px;
+}
+.chord:not(.diagram) .inner:hover i.diagram {
+	background: white;
+  z-index: 5;
+  @apply shadow-lg;
+}

@@ -2121,6 +2121,11 @@ markdown-it-charts@^1.0.5:
   resolved "https://registry.yarnpkg.com/markdown-it-charts/-/markdown-it-charts-1.0.5.tgz#475243d7ee79652c139e9d84895f8fda0ceca945"
   integrity sha512-dx7P+PfiFKFm4peUexs/C1Z0i++3TxcIDirhPSg4YGlui2Ao5+xRuXnlUtB6ztdVOOWP3Lllzry3cPCzkwPCSg==
 
+markdown-it-chords@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/markdown-it-chords/-/markdown-it-chords-1.0.3.tgz#4bc44f36275ed7699f73c9169e857d31620ee899"
+  integrity sha512-bm4UFAcJmxraFHl71HzbBsuqlbT9QCH3Mtu5ebwspy76C+axjGau88w3e3OMR0tibMXMPU9uNcp0zjJIF9JOfg==
+
 markdown-it-container@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/markdown-it-container/-/markdown-it-container-3.0.0.tgz#1d19b06040a020f9a827577bb7dbf67aa5de9a5b"

@@ -25,6 +25,7 @@ module.exports = (config) => {
   let markdownItCharts = require("markdown-it-charts");
   let markdownItPlantUML = require("markdown-it-plantuml-ex");
   let markdownItTextualUML = require("markdown-it-textual-uml");
+  let markdownItChords = require("markdown-it-chords");
 
   let options = {
     html: true
@@ -76,7 +77,8 @@ module.exports = (config) => {
   .use(markdownItCharts)
   .use(markdownItPlantUML)
   .use(markdownItTextualUML)
-  .use(markdownItKatex);
+  .use(markdownItKatex)
+  .use(markdownItChords);
 
   config.setLibrary("md", markdownLib);
 

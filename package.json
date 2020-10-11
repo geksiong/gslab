@@ -25,6 +25,7 @@
 		"luxon": "^1.24.1",
 		"markdown-it-anchor": "^6.0.0",
 		"markdown-it-charts": "^1.0.5",
+		"markdown-it-chords": "^1.0.3",
 		"markdown-it-container": "^3.0.0",
 		"markdown-it-emoji": "^1.4.0",
 		"markdown-it-external-links": "^0.0.6",
