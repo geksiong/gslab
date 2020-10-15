@@ -37,3 +37,8 @@ document.addEventListener(
   },
   false
 );
+
+// medium-zoom on article images
+mediumZoom("#content img", {
+  background: "#333",
+});
