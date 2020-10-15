@@ -53,6 +53,25 @@ module.exports = (config) => {
       }
     }
   })
+  .use(markdownItContainer, 'abcmusic', {
+    validate: function(params) {
+      return params.trim().match(/^abcmusic\s*(.*)$/);
+    },
+    render: (tokens, idx) => {
+      if (tokens[idx].nesting === 1) {
+          const m = tokens[idx].info.trim().match(/^abcmusic\s*(.*)$/);
+          const containerHeader = m[1];
+          return `<div class="abcmusic">
+          <span class="title">${containerHeader}</span>
+          <select class="tunes-select"></select>
+          <div class="abc-score"></div>
+          <div class="abc-tunes" style="display: none">
+          `;
+      } else {
+          return `</div></div>`;
+      }
+    }
+  })
   .use(markdownItContainer, '', {
     validate: () => true,
     render: (tokens, idx) => {
@@ -102,7 +121,7 @@ module.exports = (config) => {
   config.addLayoutAlias('post', 'layouts/post.njk');
 
   config.addFilter("readableDate", (date) => {
-      return DateTime.fromJSDate(date, { zone: "utc" }).toFormat("d LLLL yyyy hh:mm a");
+      return DateTime.fromJSDate(date, { zone: "utc" }).toFormat("d LLLL yyyy");
   });
 
   if (process.env.NODE_ENV === "production") {

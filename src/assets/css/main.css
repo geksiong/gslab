@@ -312,3 +312,9 @@ code .linenumber {
 .justchords .chord i.diagram {
 	position: relative;
 }
+
+/* abcmusic */
+
+.abcmusic .title {
+  @apply block text-xl font-bold;
+}
