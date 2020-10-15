@@ -65,10 +65,10 @@ module.exports = (config) => {
           <span class="title">${containerHeader}</span>
           <select class="tunes-select"></select>
           <div class="abc-score"></div>
-          <div class="abc-tunes" style="display: none">
+          <pre class="abc-tunes" style="display: none">
           `;
       } else {
-          return `</div></div>`;
+          return `</pre></div>`;
       }
     }
   })
