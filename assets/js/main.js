@@ -92,36 +92,37 @@ new ClipboardJS(".btn-copy-code", {
 });
 
 // abcjs
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.ABCJS !== undefined) {
+    let abcSections = document.querySelectorAll(".abcmusic");
+    for (abcSection of abcSections) {
+      // Get the tunes
+      let abcTunes = abcSection.querySelectorAll("p");
+      let tunesText = "";
+      for (abcTune of abcTunes) {
+        tunesText += abcTune.textContent + "\n\n";
+      }
 
-if (typeof ABCJS.renderAbc === "function") {
-  let abcSections = document.querySelectorAll(".abcmusic");
-  for (abcSection of abcSections) {
-    // Get the tunes
-    let abcTunes = abcSection.querySelectorAll("p");
-    let tunesText = "";
-    for (abcTune of abcTunes) {
-      tunesText += abcTune.textContent + "\n\n";
+      // Populate tunes menu
+      let tunebook = new ABCJS.TuneBook(tunesText);
+      let tunesSelect = abcSection.querySelector(".tunes-select");
+      for (const [idx, tune] of tunebook.tunes.entries()) {
+        tunesSelect.insertAdjacentHTML(
+          "beforeend",
+          `<option value="${idx}">${tune.title}</option>`
+        );
+      }
+
+      // render to the score area
+      let abcScore = abcSection.querySelector(".abc-score");
+      let renderTune = function (idx) {
+        ABCJS.renderAbc(abcScore, tunebook.tunes[idx].abc);
+      };
+
+      tunesSelect.onchange = function () {
+        renderTune(tunesSelect.value);
+      };
+      renderTune(0);
     }
-
-    // Populate tunes menu
-    let tunebook = new ABCJS.TuneBook(tunesText);
-    let tunesSelect = abcSection.querySelector(".tunes-select");
-    for (const [idx, tune] of tunebook.tunes.entries()) {
-      tunesSelect.insertAdjacentHTML(
-        "beforeend",
-        `<option value="${idx}">${tune.title}</option>`
-      );
-    }
-
-    // render to the score area
-    let abcScore = abcSection.querySelector(".abc-score");
-    let renderTune = function (idx) {
-      ABCJS.renderAbc(abcScore, tunebook.tunes[idx].abc);
-    };
-
-    tunesSelect.onchange = function () {
-      renderTune(tunesSelect.value);
-    };
-    renderTune(0);
   }
-}
+});
