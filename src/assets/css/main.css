@@ -85,15 +85,23 @@ blockquote {
 }
 
 #content table {
-  @apply text-base border-gray-600;
+  @apply table text-base border-gray-600;
+}
+
+#content tbody tr {
+  @apply border-t-2;
+}
+
+#content tbody tr:nth-child(odd) {
+  @apply bg-gray-100;
 }
 
 #content th {
-  @apply px-3 py-1 border;
+  @apply px-3 py-1 border-b-2;
 }
 
 #content td {
-  @apply px-3 py-1 border;
+  @apply px-3 py-1;
 }
 
 #content h1:hover > a, #content h2:hover > a, #content h3:hover > a, #content h4:hover > a {
