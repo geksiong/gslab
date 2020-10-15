@@ -57,11 +57,36 @@ for (code of codeBlocks) {
       </div>`
     );
   }
+  // insert line numbers
+  const lines = code.querySelectorAll(".highlight-line");
+  let counter = 0;
+  for (line of lines) {
+    counter++;
+    line.insertAdjacentHTML(
+      "afterbegin",
+      `<span class="linenumber">${counter}</span>`
+    );
+  }
 }
 
 // attach copy function to "copy" buttons
 new ClipboardJS(".btn-copy-code", {
-  target: function (trigger) {
-    return trigger.parentElement.nextElementSibling;
+  text: function (trigger) {
+    // Remove line numbers from the copy operation
+    // I could only get this to work properly by manipulating the DOM directly. Doesn't work on a cloned node.
+    let code = trigger.parentElement.nextElementSibling;
+    let linenums = code.querySelectorAll(".linenumber");
+    // Hide line numbers
+    for (linenum of linenums) {
+      linenum.style.display = "none";
+    }
+    let copyText = code.innerText;
+
+    // Restore line numbers
+    for (linenum of linenums) {
+      linenum.style.display = "";
+    }
+
+    return copyText;
   },
 });

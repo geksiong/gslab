@@ -86,7 +86,9 @@ module.exports = (config) => {
     src: "src/assets/css/*"
   });
 
-  config.addPlugin(syntaxHighlight);
+  config.addPlugin(syntaxHighlight, {
+    alwaysWrapLineHighlights: true,
+  });
   config.addPlugin(readingTime);
   config.addPlugin(readerBar);
 
