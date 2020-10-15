@@ -1,15 +1,21 @@
 [
     
     {
+        "url": "/gslab/posts/music-test/",
+        "title": "Music Test",
+        "date": "15 October 2020"
+    },
+    
+    {
         "url": "/gslab/posts/markdown-plugins-test/",
         "title": "Markdown Plugins Test",
-        "date": "9 October 2020 07:08 PM"
+        "date": "9 October 2020"
     },
     
     {
         "url": "/gslab/posts/typography/",
-        "title": "Test Post",
-        "date": "21 June 2020 08:04 AM"
+        "title": "Markdown Typography Test",
+        "date": "21 June 2020"
     }
     
 ]
