@@ -1,4 +1,153 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Music Test | My Lab</title><meta name="title" content="Music Test | My Lab"><meta name="description" content="My blog &amp; coding experiments"><meta name="keywords" content="markdown,sample,"><meta name="author" content="GS Low"><meta name="robots" content="index, follow"><link rel="canonical" href="https://github.com/geksiong/posts/music-test/"><link rel="shortcut icon" type="image/png" href="/gslab/assets/img/favicon.png"><link rel="apple-touch-icon" href="/gslab/assets/img/apple-touch-icon.png"><link rel="dns-prefetch" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="https://fonts.gstatic.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"><link rel="stylesheet" href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"><link rel="stylesheet" href="/gslab/assets/css/main.css"></head><body class="flex flex-col h-screen leading-normal text-gray-800 break-words bg-white"><header id="header" class="fixed top-0 z-50 w-full px-6 py-5 transition-all duration-500 ease-in-out bg-white nice-shadow"><div class="flex flex-wrap items-center justify-between max-w-5xl mx-auto"><div class="sm:mr-8"><a class="flex items-center" href="/gslab/"><span class="self-center text-xl font-semibold text-gray-700">My Lab</span></a></div><nav id="menu" class="items-center flex-grow order-last hidden w-full mt-2 md:order-none md:w-auto md:flex md:mt-0"><a href="/gslab/about" class="block mt-4 mr-4 text-base font-medium text-gray-700 md:inline-block md:mt-0 hover:text-teal-600">About</a> <a href="/gslab/tags" class="block mt-4 mr-4 text-base font-medium text-gray-700 md:inline-block md:mt-0 hover:text-teal-600">Tag List</a> <a href="https://github.com/geksiong" target="_blank" rel="noopener" class="block mt-4 mr-4 text-base font-medium text-gray-700 md:inline-block md:mt-0 hover:text-teal-600">GitHub</a></nav><form id="search" action="/gslab/search" class="items-center justify-end flex-grow order-last hidden mt-6 sm:order-none sm:block sm:mt-0"><label class="visually-hidden" for="header-searchbox">Search here ...</label> <input type="text" id="header-searchbox" name="q" placeholder="Search here ..." class="float-right w-full h-8 p-4 text-sm text-gray-700 placeholder-gray-500 bg-gray-100 border border-transparent rounded sm:max-w-xs focus:bg-white focus:border-gray-300 focus:outline-none"> <input type="hidden" name="start" value="1"> <input type="hidden" name="size" value="12"></form><div id="menu-toggle" class="flex items-center text-gray-700 cursor-pointer md:hidden hover:text-teal-600 sm:ml-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div></div></header><main class="flex-grow"><div class="reader-bar-start"><div style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=75&amp;fm=jpg&amp;w=400&amp;fit=max');" class="w-full pt-32 pb-2 bg-center bg-cover"><div class="max-w-5xl mx-auto"><header class="mb-4 text-white"><h1 class="mt-0 mb-2 font-medium text-center text-white" style="text-shadow: 2px 2px 4px #000;">Music Test</h1><div class="text-center" style="text-shadow: 2px 2px 4px #000;">Published on 15 October 2020</div><div class="text-center" style="text-shadow: 2px 2px 4px #000;">Reading time: about 4 min</div><div class="mt-3 text-center"><a href="/gslab/tags/markdown" class="inline-block px-3 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded-full m-1/2">#markdown</a> <a href="/gslab/tags/sample" class="inline-block px-3 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded-full m-1/2">#sample</a></div></header></div></div><article class="max-w-5xl mx-auto mt-12 overflow-auto"><div id="content" class="mx-6 text-lg leading-relaxed"><h1 id="rendering-abc-music-scores">Rendering ABC Music Scores</h1><div class="abcmusic"><span class="title">A collection of 6 tunes</span> <select class="tunes-select"></select><div class="abc-score"></div><div class="abc-tunes" style="display: none"><p>X: 22 T:Money Lost M:3/4 L:1/8 Q:1/4=100 C:Paul Rosen S:Copyright 2007, Paul Rosen R:Klezmer K:Dm Ade|:&quot;Dm&quot;(f2d)e gf|&quot;A7&quot;e2^c4|&quot;Gm&quot;B&gt;&gt;^c BA BG|&quot;A&quot;A3Ade|&quot;Dm&quot;(f2d)e gf|&quot;A7&quot;e2^c4| &quot;Gm&quot;A&gt;&gt;B &quot;A7&quot;AG FE|1&quot;Dm&quot;D3Ade:|2&quot;Dm&quot;D3DEF||:&quot;Gm&quot;(G2D)E FG|&quot;Dm&quot;A2F4|&quot;Gm&quot;B&gt;&gt;c &quot;A7&quot;BA BG| &quot;Dm&quot;A3 DEF|&quot;Gm&quot;(G2D)EFG|&quot;Dm&quot;A2F4|&quot;E°&quot;E&gt;&gt;Fy &quot;(A7)&quot;ED^C2|1&quot;Dm&quot;D3DEF:|2&quot;Dm&quot;D6||</p><p>X: 39 T:Pretty Little Liza C:Paul Rosen S:Copyright 2005, Paul Rosen M:4/4 L:1/8 Q:1/2=106 R:old time K:Am &quot;Am&quot;A2AA c2dd|e2eg e2dc|A2AA c2dd|e2cc A2cc|&quot;Em (G)&quot;B2BB B2BB| B2BB B2BB|&quot;Am&quot;A2AA c2dd|e2eg e2c2|&quot;D&quot;d2dd d2dd|d2dd d2cd| &quot;Am&quot;e2cc A2c2|&quot;G&quot;BAG2 BAG2|&quot;Am&quot;A2AA A2AA|A2AA A2AA|:&quot;Am&quot;e4 a3e|&quot;G&quot;g2d2- d2eg| &quot;Am&quot;a2aa ged2|&quot;Em&quot;e2ee e2ee|&quot;Am&quot;e4 a3e|&quot;G&quot;g2d2- d2Bc|&quot;Em&quot;d2e2 dcB2|&quot;Am&quot;A2AA A2AA:|</p><p>X:1 M:4/4 L:1/16 %%stretchlast .7 Q:1/4=100 T:Piano %%staves {(PianoRightHand) (PianoLeftHand)} V:PianoRightHand clef=treble V:PianoLeftHand clef=bass K:C [V: PianoRightHand] !mp!e2f2 e2d2 c2B2 A4|!&gt;(!B2d2 g4 c6 !&gt;)!e2|!p![G4e4] z4 A4 G4|c12 z4|[A12f12] [g4d4]|z4 !&lt;(!B4 !&lt;)![A8c8]| !mf!A4 z4 d8|B8 [G4c4] z4|f2A2 c4 f4 g4|[f12d12] e4|!&lt;(!A4 A4 c2e2 !&lt;)!g4|!f!e8 z8| [A4d4] z4 A8|BcBA G4 c4 G2B2|A2G2 A2B2 c4 B2G2|c12 z4|] [V: PianoLeftHand] [E,12C,12] F,4|[G,8D,8] [C,8E,8]|G,4 C,4 C,4 B,,A,,C,B,,|A,,12 z4|A,,4 B,,4 C,2D,2 B,,C,D,E,|C,2E,2 G,4 E,2F,2 G,4| F,4 A,4 [A,8F,8]|G,2F,2 E,2D,2 [C,4E,4] z4|[F,8A,8] [D,4A,4] z4|F,2G,2 A,2F,2 D,2F,2 C,2B,,2|C,4 F,A,D,F, E,4 z4|C,8 z8| F,4 E,4 F,4 A,4|[D,8G,8] E,4 z4|C,4 [C,4F,4] z4 G,4|C,12 z4|]</p><p>X:100 T:Mary M:C L:1/4 K:G BAGA| BBB2|AAA2| Bdd2| w:Mar- y had a lit- tle lamb, lit- tle lamb, lit- tle lamb, BAGA| BBBB|AABA |G|] w:Mar- y had a lit- tle lamb whose fleece was white as snow.</p><p>X:1 %%staves 1 2 3 T: Sonata I C: J.S. Bach M: C Q:&quot;Adagio&quot; L: 1/8 K:C V:1 clef=treble name=&quot;Violino I&quot; sname=&quot;Vl. I&quot; V:2 clef=treble name=&quot;Violino II&quot; sname=&quot;Vl. II&quot; space=+10 V:3 clef=bass name=&quot;Violoncello&quot; sname=&quot;Vc.&quot; [V:1] g8-|gf/e/ {e}f&gt;g (a/f/d/f/) (A//=B//A//B//TB3//A///B///)| [V:2] z8 | z8 | [V:3] z cec gGBG | Aa- a/_b/a/g/ f3 g/f/ | % [V:1] c/gf/ E/ed/ c/c'b/ A/ag/ | ^f/e/d- d/(c/B/A/) G/(e/c/e/) Aa| d2-d/g/_b/a/ a3 g/=f/| [V:2] c8- | cB/A/ {A}B&gt;c (e/c/A/c/) (E//^F//E//F//TF3//E///F///) | G/(D/G/A/) _B/G/g/e/ ^cA d2-| [V:3] edcB AG^FE | D^FGg c3d/c/| _BG g2-gf/e/ f&gt;g|</p><p>X:665 T:Amazing Grace C:Lyric Author: John Newton R:Early American Melody Z:Public Domain N:A well known tune L:1/4 M:3/4 %%staves (S A) (T B) V:S clef=treble name=&quot;&quot; V:A clef=treble name=&quot;&quot; V:T clef=bass name=&quot;&quot; V:B clef=bass name=&quot;&quot; K:Ab % Measures 1 - 7 [V:S] (E/ F/) | A2 (c/ A/) | c2 B | A2 F | E2 (E/ F/) | A2 (c/ A/) | c2 (B/ c/) | He2 | [V:A] (C/ D/) | C2 (E/ C/) | E2 D | C2 D | C2 (C/ D/) | C2 (E/ C/) | E2 A | G2 | [V:T] A, | E,2 A, | A,2 G, | A,2 A, | A,2 A, | E,2 A, | A,2 A, | HB,2 | [V:B] A,, | A,,2 A,, | A,,2 E, | F,2 D, | A,,2 A,, | A,,2 A,, | A,2 F, | E,2 | % Measures 8 - 14 [V:S] (B/ c/) | e2 (e/ c/) | A2 (F/ E/) | A2 F | E2 (E/ F/) | A2 (c/ A/) | c2 B | HA2 | [V:A] G | A2 (A/ E/) | E2 (D/ C/) | F2 D | C2 (C/ D/) | C2 (E/ A/) | G2 G | E2 | [V:T] E | C2 (C/ A,/) | C2 A, | A,2 A, | A,2 A, | A,2 (A,/ C/) | E2 D | HC2 | [V:B] E, | A,2 A, | A,2 A, | D,2 D, | A,,2 A, | F,2 E, | E,2 E, | A,,2 |</p></div></div><div class="abcmusic"><span class="title">Drum score</span> <select class="tunes-select"></select><div class="abc-score"></div><div class="abc-tunes" style="display: none"><p>X:1 T:Drum Kit %%map drummap D print=D heads=x_head % pedal hi-hat %%map drummap E print=E % bass drum 1 %%map drummap F print=F % acoustic bass drum %%map drummap G print=G % low floor tom-tom %%map drummap A print=A % high floor tom-tom %%map drummap B print=B % low tom-tom %%map drummap ^B print=B heads=triangle % tambourine %%map drummap c print=c % acoustic snare %%map drummap _c print=c % electric snare %%map drummap ^c print=c heads=triangle % low wood block %%map drummap =c print=c % side stick %%map drummap d print=d % low-mid tom tom %%map drummap ^d print=d heads=triangle % high wood block %%map drummap e print=e % high-mid tom tom %%map drummap ^e print=e heads=triangle % cowbell %%map drummap f print=f % high tom tom %%map drummap ^f print=f heads=x_head % ride cymbal 1 %%map drummap g print=g heads=x_head % closed hi-hat %%map drummap ^g print=g heads=diamond % open hi-hat %%map drummap a print=a heads=x_head % crash cymbal 1 %%map drummap ^a print=a heads=triangle % open triangle %%MIDI drummap D 44 % pedal hi-hat %%MIDI drummap E 36 % bass drum 1 %%MIDI drummap F 35 % acoustic bass drum %%MIDI drummap G 41 % low floor tom-tom %%MIDI drummap A 43 % high floor tom-tom %%MIDI drummap B 45 % low tom-tom %%MIDI drummap ^B 54 % tambourine %%MIDI drummap c 38 % acoustic snare %%MIDI drummap _c 40 % electric snare %%MIDI drummap ^c 77 % low wood block %%MIDI drummap =c 37 % side stick %%MIDI drummap d 47 % low-mid tom tom %%MIDI drummap ^d 76 % high wood block %%MIDI drummap e 48 % high-mid tom tom %%MIDI drummap ^e 56 % cowbell %%MIDI drummap f 50 % high tom tom %%MIDI drummap ^f 51 % ride cymbal 1 %%MIDI drummap g 42 % closed hi-hat %%MIDI drummap ^g 46 % open hi-hat %%MIDI drummap a 49 % crash cymbal 1 %%MIDI drummap ^a 81 % open triangle %%score (1 2) Q:1/4=120 M:4/4 L:1/4 K:C perc V:1 z4| g/^f/g/^f/ g/^f/g/^f/| c/^f/g/^f/ A/^f/g/^f/| c/^f/g/^f/ A/^f/g/^f/| c/c/g/^f/ A/A/g/^f/| c/^f/c/^f/ A/^f/A/^f/|(3B/B/B/ (3f/f/f/ (3e/e/e/ (3d/d/d/ | a4| V:2 E D E/E/ D|E D E/E/ D|E D E/E/ D|E D E/E/ D| E D E/E/ D|E D E/E/ D|E D E/E/ D|E D E/E/ D|</p></div></div></div><div class="flex justify-between mx-6 mt-10"><p class="text-left"></p><p class="text-right"><a href="/posts/markdown-plugins-test/">Markdown Plugins Test »</a><br><span class="text-sm text-gray-500">Older</span></p></div></article><div><button id="upBtn" style="position:fixed; width:32px; height:32px; border-radius:50%; border:none; background-color:black; right:32px; bottom:32px; color:white; focus:outline-none; cursor:pointer; transition-duration:500ms; opacity:0; pointer-events:none;"><i class="arrow up"></i></button></div><style>.arrow {
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Music Test | My Lab</title><meta name="title" content="Music Test | My Lab"><meta name="description" content="My blog &amp; coding experiments"><meta name="keywords" content="markdown,sample,"><meta name="author" content="GS Low"><meta name="robots" content="index, follow"><link rel="canonical" href="https://github.com/geksiong/posts/music-test/"><link rel="shortcut icon" type="image/png" href="/gslab/assets/img/favicon.png"><link rel="apple-touch-icon" href="/gslab/assets/img/apple-touch-icon.png"><link rel="dns-prefetch" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="https://fonts.gstatic.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"><link rel="stylesheet" href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"><link rel="stylesheet" href="/gslab/assets/css/main.css"></head><body class="flex flex-col h-screen leading-normal text-gray-800 break-words bg-white"><header id="header" class="fixed top-0 z-50 w-full px-6 py-5 transition-all duration-500 ease-in-out bg-white nice-shadow"><div class="flex flex-wrap items-center justify-between max-w-5xl mx-auto"><div class="sm:mr-8"><a class="flex items-center" href="/gslab/"><span class="self-center text-xl font-semibold text-gray-700">My Lab</span></a></div><nav id="menu" class="items-center flex-grow order-last hidden w-full mt-2 md:order-none md:w-auto md:flex md:mt-0"><a href="/gslab/about" class="block mt-4 mr-4 text-base font-medium text-gray-700 md:inline-block md:mt-0 hover:text-teal-600">About</a> <a href="/gslab/tags" class="block mt-4 mr-4 text-base font-medium text-gray-700 md:inline-block md:mt-0 hover:text-teal-600">Tag List</a> <a href="https://github.com/geksiong" target="_blank" rel="noopener" class="block mt-4 mr-4 text-base font-medium text-gray-700 md:inline-block md:mt-0 hover:text-teal-600">GitHub</a></nav><form id="search" action="/gslab/search" class="items-center justify-end flex-grow order-last hidden mt-6 sm:order-none sm:block sm:mt-0"><label class="visually-hidden" for="header-searchbox">Search here ...</label> <input type="text" id="header-searchbox" name="q" placeholder="Search here ..." class="float-right w-full h-8 p-4 text-sm text-gray-700 placeholder-gray-500 bg-gray-100 border border-transparent rounded sm:max-w-xs focus:bg-white focus:border-gray-300 focus:outline-none"> <input type="hidden" name="start" value="1"> <input type="hidden" name="size" value="12"></form><div id="menu-toggle" class="flex items-center text-gray-700 cursor-pointer md:hidden hover:text-teal-600 sm:ml-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div></div></header><main class="flex-grow"><div class="reader-bar-start"><div style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=75&amp;fm=jpg&amp;w=400&amp;fit=max');" class="w-full pt-32 pb-2 bg-center bg-cover"><div class="max-w-5xl mx-auto"><header class="mb-4 text-white"><h1 class="mt-0 mb-2 font-medium text-center text-white" style="text-shadow: 2px 2px 4px #000;">Music Test</h1><div class="text-center" style="text-shadow: 2px 2px 4px #000;">Published on 15 October 2020</div><div class="text-center" style="text-shadow: 2px 2px 4px #000;">Reading time: about 4 min</div><div class="mt-3 text-center"><a href="/gslab/tags/markdown" class="inline-block px-3 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded-full m-1/2">#markdown</a> <a href="/gslab/tags/sample" class="inline-block px-3 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded-full m-1/2">#sample</a></div></header></div></div><article class="max-w-5xl mx-auto mt-12 overflow-auto"><div id="content" class="mx-6 text-lg leading-relaxed"><h1 id="rendering-abc-music-scores">Rendering ABC Music Scores</h1><div class="abcmusic"><span class="title">A collection of 6 tunes</span> <select class="tunes-select"></select><div class="abc-score"></div><pre class="abc-tunes" style="display: none">
+          <p>X: 22
+T:Money Lost
+M:3/4
+L:1/8
+Q:1/4=100
+C:Paul Rosen
+S:Copyright 2007, Paul Rosen
+R:Klezmer
+K:Dm
+Ade|:&quot;Dm&quot;(f2d)e gf|&quot;A7&quot;e2^c4|&quot;Gm&quot;B&gt;&gt;^c BA BG|&quot;A&quot;A3Ade|&quot;Dm&quot;(f2d)e gf|&quot;A7&quot;e2^c4|
+&quot;Gm&quot;A&gt;&gt;B &quot;A7&quot;AG FE|1&quot;Dm&quot;D3Ade:|2&quot;Dm&quot;D3DEF||:&quot;Gm&quot;(G2D)E FG|&quot;Dm&quot;A2F4|&quot;Gm&quot;B&gt;&gt;c &quot;A7&quot;BA BG|
+&quot;Dm&quot;A3 DEF|&quot;Gm&quot;(G2D)EFG|&quot;Dm&quot;A2F4|&quot;E°&quot;E&gt;&gt;Fy &quot;(A7)&quot;ED^C2|1&quot;Dm&quot;D3DEF:|2&quot;Dm&quot;D6||</p>
+<p>X: 39
+T:Pretty Little Liza
+C:Paul Rosen
+S:Copyright 2005, Paul Rosen
+M:4/4
+L:1/8
+Q:1/2=106
+R:old time
+K:Am
+&quot;Am&quot;A2AA c2dd|e2eg e2dc|A2AA c2dd|e2cc A2cc|&quot;Em (G)&quot;B2BB B2BB|
+B2BB B2BB|&quot;Am&quot;A2AA c2dd|e2eg e2c2|&quot;D&quot;d2dd d2dd|d2dd d2cd|
+&quot;Am&quot;e2cc A2c2|&quot;G&quot;BAG2 BAG2|&quot;Am&quot;A2AA A2AA|A2AA A2AA|:&quot;Am&quot;e4 a3e|&quot;G&quot;g2d2- d2eg|
+&quot;Am&quot;a2aa ged2|&quot;Em&quot;e2ee e2ee|&quot;Am&quot;e4 a3e|&quot;G&quot;g2d2- d2Bc|&quot;Em&quot;d2e2 dcB2|&quot;Am&quot;A2AA A2AA:|</p>
+<p>X:1
+M:4/4
+L:1/16
+%%stretchlast .7
+Q:1/4=100
+T:Piano
+%%staves {(PianoRightHand) (PianoLeftHand)}
+V:PianoRightHand clef=treble
+V:PianoLeftHand clef=bass
+K:C
+[V: PianoRightHand] !mp!e2f2 e2d2 c2B2 A4|!&gt;(!B2d2 g4 c6 !&gt;)!e2|!p![G4e4] z4 A4 G4|c12 z4|[A12f12] [g4d4]|z4 !&lt;(!B4 !&lt;)![A8c8]|
+!mf!A4 z4 d8|B8 [G4c4] z4|f2A2 c4 f4 g4|[f12d12] e4|!&lt;(!A4 A4 c2e2 !&lt;)!g4|!f!e8 z8|
+[A4d4] z4 A8|BcBA G4 c4 G2B2|A2G2 A2B2 c4 B2G2|c12 z4|]
+[V: PianoLeftHand] [E,12C,12] F,4|[G,8D,8] [C,8E,8]|G,4 C,4 C,4 B,,A,,C,B,,|A,,12 z4|A,,4 B,,4 C,2D,2 B,,C,D,E,|C,2E,2 G,4 E,2F,2 G,4|
+F,4 A,4 [A,8F,8]|G,2F,2 E,2D,2 [C,4E,4] z4|[F,8A,8] [D,4A,4] z4|F,2G,2 A,2F,2 D,2F,2 C,2B,,2|C,4 F,A,D,F, E,4 z4|C,8 z8|
+F,4 E,4 F,4 A,4|[D,8G,8] E,4 z4|C,4 [C,4F,4] z4 G,4|C,12 z4|]</p>
+<p>X:100
+T:Mary
+M:C
+L:1/4
+K:G
+BAGA| BBB2|AAA2| Bdd2|
+w:Mar- y had a lit- tle lamb, lit- tle lamb, lit- tle lamb,
+BAGA| BBBB|AABA |G|]
+w:Mar- y had a lit- tle lamb whose fleece was white as snow.</p>
+<p>X:1
+%%staves 1 2 3
+T: Sonata I
+C: J.S. Bach
+M: C
+Q:&quot;Adagio&quot;
+L: 1/8
+K:C
+V:1 clef=treble name=&quot;Violino I&quot;      sname=&quot;Vl. I&quot;
+V:2 clef=treble name=&quot;Violino II&quot;     sname=&quot;Vl. II&quot;  space=+10
+V:3 clef=bass   name=&quot;Violoncello&quot; sname=&quot;Vc.&quot;
+[V:1]  g8-|gf/e/ {e}f&gt;g (a/f/d/f/) (A//=B//A//B//TB3//A///B///)|
+[V:2] z8 | z8 |
+[V:3] z cec gGBG | Aa- a/_b/a/g/ f3 g/f/ |
+%
+[V:1] c/gf/ E/ed/ c/c'b/ A/ag/ | ^f/e/d- d/(c/B/A/) G/(e/c/e/) Aa| d2-d/g/_b/a/ a3 g/=f/|
+[V:2] c8- | cB/A/ {A}B&gt;c (e/c/A/c/) (E//^F//E//F//TF3//E///F///) | G/(D/G/A/) _B/G/g/e/ ^cA d2-|
+[V:3] edcB AG^FE | D^FGg c3d/c/| _BG g2-gf/e/ f&gt;g|</p>
+<p>X:665
+T:Amazing Grace
+C:Lyric Author: John Newton
+R:Early American Melody
+Z:Public Domain
+N:A well known tune
+L:1/4
+M:3/4
+%%staves (S A) (T B)
+V:S clef=treble name=&quot;&quot;
+V:A clef=treble name=&quot;&quot;
+V:T clef=bass name=&quot;&quot;
+V:B clef=bass name=&quot;&quot;
+K:Ab
+% Measures 1 - 7
+[V:S] (E/ F/) | A2 (c/ A/) | c2 B | A2 F |  E2 (E/ F/) | A2 (c/ A/) | c2 (B/ c/) | He2 |
+[V:A] (C/ D/) | C2 (E/ C/) | E2 D | C2 D | C2 (C/ D/) | C2 (E/ C/) | E2 A | G2 |
+[V:T] A, | E,2 A, | A,2 G, | A,2 A, | A,2 A, | E,2 A, | A,2 A, | HB,2 |
+[V:B] A,, | A,,2 A,, | A,,2 E, | F,2 D, | A,,2 A,, | A,,2 A,, | A,2 F, | E,2 |
+% Measures 8 - 14
+[V:S] (B/ c/) | e2 (e/ c/)  | A2 (F/ E/) |  A2 F | E2 (E/ F/) | A2 (c/ A/) | c2 B | HA2 |
+[V:A] G | A2 (A/ E/) | E2 (D/ C/) | F2 D | C2 (C/ D/) | C2 (E/ A/) | G2 G | E2 |
+[V:T] E | C2 (C/ A,/) | C2 A, | A,2 A, | A,2 A, | A,2 (A,/ C/) | E2 D | HC2 |
+[V:B] E, | A,2 A, | A,2 A, | D,2 D, | A,,2 A, | F,2 E, | E,2 E, | A,,2 |</p>
+</pre></div><div class="abcmusic"><span class="title">Drum score</span> <select class="tunes-select"></select><div class="abc-score"></div><pre class="abc-tunes" style="display: none">
+          <p>X:1
+T:Drum Kit
+%%map drummap D    print=D heads=x_head   % pedal hi-hat
+%%map drummap E    print=E                % bass drum 1
+%%map drummap F    print=F                % acoustic bass drum
+%%map drummap G    print=G                % low floor tom-tom
+%%map drummap A    print=A                % high floor tom-tom
+%%map drummap B    print=B                % low tom-tom
+%%map drummap ^B   print=B heads=triangle % tambourine
+%%map drummap c    print=c                % acoustic snare
+%%map drummap _c   print=c                % electric snare
+%%map drummap ^c   print=c heads=triangle % low wood block
+%%map drummap =c   print=c                % side stick
+%%map drummap d    print=d                % low-mid tom tom
+%%map drummap ^d   print=d heads=triangle % high wood block
+%%map drummap e    print=e                % high-mid tom tom
+%%map drummap ^e   print=e heads=triangle % cowbell
+%%map drummap f    print=f                % high tom tom
+%%map drummap ^f   print=f heads=x_head   % ride cymbal 1
+%%map drummap g    print=g heads=x_head   % closed hi-hat
+%%map drummap ^g   print=g heads=diamond  % open hi-hat
+%%map drummap a    print=a heads=x_head   % crash cymbal 1
+%%map drummap ^a   print=a heads=triangle % open triangle
+%%MIDI drummap D   44 % pedal hi-hat
+%%MIDI drummap E   36 % bass drum 1
+%%MIDI drummap F   35 % acoustic bass drum
+%%MIDI drummap G   41 % low floor tom-tom
+%%MIDI drummap A   43 % high floor tom-tom
+%%MIDI drummap B   45 % low tom-tom
+%%MIDI drummap ^B  54 % tambourine
+%%MIDI drummap c   38 % acoustic snare
+%%MIDI drummap _c  40 % electric snare
+%%MIDI drummap ^c  77 % low wood block
+%%MIDI drummap =c  37 % side stick
+%%MIDI drummap d   47 % low-mid tom tom
+%%MIDI drummap ^d  76 % high wood block
+%%MIDI drummap e   48 % high-mid tom tom
+%%MIDI drummap ^e  56 % cowbell
+%%MIDI drummap f   50 % high tom tom
+%%MIDI drummap ^f  51 % ride cymbal 1
+%%MIDI drummap g   42 % closed hi-hat
+%%MIDI drummap ^g  46 % open hi-hat
+%%MIDI drummap a   49 % crash cymbal 1
+%%MIDI drummap ^a  81 % open triangle
+%%score (1 2)
+Q:1/4=120
+M:4/4
+L:1/4
+K:C perc
+V:1
+z4| g/^f/g/^f/ g/^f/g/^f/| c/^f/g/^f/ A/^f/g/^f/| c/^f/g/^f/ A/^f/g/^f/|
+c/c/g/^f/ A/A/g/^f/| c/^f/c/^f/ A/^f/A/^f/|(3B/B/B/ (3f/f/f/ (3e/e/e/ (3d/d/d/ | a4|
+V:2
+E D E/E/ D|E D E/E/ D|E D E/E/ D|E D E/E/ D|
+E D E/E/ D|E D E/E/ D|E D E/E/ D|E D E/E/ D|</p>
+</pre></div></div><div class="flex justify-between mx-6 mt-10"><p class="text-left"></p><p class="text-right"><a href="/posts/markdown-plugins-test/">Markdown Plugins Test »</a><br><span class="text-sm text-gray-500">Older</span></p></div></article><div><button id="upBtn" style="position:fixed; width:32px; height:32px; border-radius:50%; border:none; background-color:black; right:32px; bottom:32px; color:white; focus:outline-none; cursor:pointer; transition-duration:500ms; opacity:0; pointer-events:none;"><i class="arrow up"></i></button></div><style>.arrow {
     border: solid white;
     border-width: 0 3px 3px 0;
     display: inline-block;
