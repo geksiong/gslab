@@ -42,3 +42,26 @@ document.addEventListener(
 mediumZoom("#content img", {
   background: "#333",
 });
+
+/* enhanced code blocks */
+const codeBlocks = document.querySelectorAll("code");
+for (code of codeBlocks) {
+  // toolbar with language and copy function
+  const lang = code.className.replace("language-", "");
+  if (lang) {
+    code.insertAdjacentHTML(
+      "beforebegin",
+      `<div class="code-toolbar">
+        <button class="code-toolbar-item">${lang}</button>
+        <button class="code-toolbar-item btn-copy-code">copy</button>
+      </div>`
+    );
+  }
+}
+
+// attach copy function to "copy" buttons
+new ClipboardJS(".btn-copy-code", {
+  target: function (trigger) {
+    return trigger.parentElement.nextElementSibling;
+  },
+});
